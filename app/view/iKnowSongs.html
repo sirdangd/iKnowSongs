@@ -1,0 +1,107 @@
+<header class="banner">
+		<section>
+        <center>
+            <h1 class="banner-item banner-title"><div class="animated bounceInDown">iKnowSongs</div></h1>
+        </center>
+		</section>
+		<nav>
+			<div class="skyline"></div>
+		</nav>
+	</header>
+    <div id='cssmenu'>
+        <ul>
+            <li><a href='index.html'><span>Home</span></a></li>
+            <li class='active'><a href='acoustic.html'><span>Acoustic</span></a></li>
+            <li><a href='ukulele.html'><span>Ukulele</span></a></li>
+            <li><a href='classical.html'><span>Classical</span></a></li>
+        </ul>
+    </div>
+            <br><br>
+        <div class="animated fadeInLeft">
+        <h2 align="center">Acoustic</h2>
+        </div>
+        <header class="table">
+        		<section>
+                <table>
+                  <tr>
+                    <td>
+                        <button class="edit" data-ng-click="toggleNames()">
+                          <div ng-show="myValue" data-ng-model="DIV">
+                            <h2 class="editText">EDIT</h2>
+                          </div>
+													<div ng-show="myValue2" data-ng-model="DIV2">
+														<h2 class="editText">DONE</h2>
+													</div>
+                        </button>
+                        </td>
+                        <td>
+                        <div ng-show="myValue9" data-ng-model="DIV9">
+                          <img src="{{imgSrc}}" style="width: 200px; height: 200px; margin-left: -40px" />
+                        </div>
+                      </td>
+                    <td>
+                      <div ng-show="myValue3" data-ng-model="DIV3">
+                        <h2 class="record">{{recordName}}</h2>
+                        <h2 class="artist">{{artistName}}</h2>
+                      </div>
+                      <div ng-show="myValue4" data-ng-model="DIV4">
+                        <div>
+                          <input type="text"class="record" style="margin-left: -550px; margin-bottom: -30" data-ng-model="recordName">
+                          <br>
+                        </div>
+                        <div>
+                          <input type="text" class="artist" style="margin-left: -550px;" data-ng-model="artistName">
+
+                        </div>
+                      </div>
+                    </td>
+                  <td>
+                      <tr>
+                        <td>
+                          <div ng-show="myValue5" data-ng-model="DIV5">
+                            <h3 class="capo" id="capo">{{capo}}</h3>
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-show="myValue6" data-ng-model="DIV6">
+                            <h3 class="chords" id="chords">{{chords}}</h3>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div ng-show="myValue7" data-ng-model="DIV7">
+                            <input type="text" class="capoEdit" data-ng-model="capo"></input>
+
+                        </div>
+                        </td>
+                        <td>
+                          <div ng-show="myValue8" data-ng-model="DIV8">
+                            <input type="text" class="chordsEdit" data-ng-model="chords"></input>
+
+                          </div>
+                        </div>
+                        </td>
+                        <tr>
+                          <div ng-show="myValue10" data-ng-model="DIV10">
+                            <br>
+                            <input type="text" class="imgEdit" data-ng-model="imgSrc"></input>
+
+                          </div>
+                        </tr>
+                      </tr>
+                  </td>
+                </tr>
+                </table>
+                <iframe
+                  src="https://embed.spotify.com/?uri=spotify%3Atrack%3A7qiZfU4dY1lWllzX7mPBI3&view=coverart"
+                  margin-left="-200px"
+                  width="350px" height="310px"
+                  frameborder="0"
+                  allowtransparency="true"
+                  >
+                </iframe>
+        		</section>
+        	</header>
+          <br>
+					<button style="width: 100%; height: 50px;font-family: monospace; font-size: 30px;" data-ng-click="newSong()">Add Song</button>

@@ -1,0 +1,14 @@
+<p>Name is {{myName}}</p>
+<input type="text" data-ng-model="myName">
+
+<p data-ng-repeat="l in list">{{l}}</p>
+<p data-ng-repeat="(s, n) in songs">Singer {{s}} With Song {{n}}</p>
+
+<button data-ng-click="showName()">Button</button>
+
+<input type="text" data-ng-model="singer">
+<input type="text" data-ng-model="song">
+<button data-ng-click="addSong()">Add Song</button>
+
+<p data-ng-show="myName !== 'Danny'">I am shown if you do not type Danny</p>
+<button data-ng-click="showHide()">Show/Hide</button>

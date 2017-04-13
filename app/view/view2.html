@@ -1,0 +1,6 @@
+<div class="container">
+	Name: <input type="text" data-ng-model="name"/> {{name}}
+	<ul>
+		<li data-ng-repeat="aname in names | filter:name | orderBy: 'fn'">{{aname.fn}} - {{aname.ln}}</li>
+	</ul>
+</div>

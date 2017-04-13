@@ -1,0 +1,416 @@
+body {
+background: url(images/indexbackground copy.jpg) top center no-repeat; background-attachment:fixed;
+}
+               @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+    html {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+#cssmenu {
+width: 462px;
+margin-left: auto;
+margin-right: auto;
+background-color: black;
+display: block;
+}
+#cssmenu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+line-height: 1;
+display: block;
+zoom: 1;
+}
+#cssmenu ul:after {
+content: " ";
+display: block;
+font-size: 0;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+#cssmenu ul li {
+display: inline-block;
+padding: 0;
+margin: 0;
+}
+#cssmenu.align-right ul li {
+float: right;
+}
+#cssmenu.align-center ul {
+text-align: center;
+}
+#cssmenu ul li a {
+color: #ffffff;
+text-decoration: none;
+display: block;
+padding: 15px 25px;
+font-family: 'Open Sans', sans-serif;
+font-weight: 700;
+text-transform: uppercase;
+font-size: 14px;
+position: relative;
+-webkit-transition: color .25s;
+-moz-transition: color .25s;
+-ms-transition: color .25s;
+-o-transition: color .25s;
+transition: color .25s;
+}
+#cssmenu ul li a:hover {
+color: #333333;
+}
+#cssmenu ul li a:hover:before {
+width: 100%;
+}
+#cssmenu ul li a:after {
+content: "";
+display: block;
+position: absolute;
+right: -3px;
+top: 19px;
+height: 6px;
+width: 6px;
+background: #ffffff;
+opacity: .5;
+}
+#cssmenu ul li a:before {
+content: "";
+display: block;
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 0;
+background: white; /*this is the line under the tabs*/
+-webkit-transition: width .25s;
+-moz-transition: width .25s;
+-ms-transition: width .25s;
+-o-transition: width .25s;
+transition: width .25s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+display: none;
+}
+#cssmenu ul li.active a {
+color: whitesmoke;
+}
+#cssmenu ul li.active a:before {
+width: 100%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+display: none;
+}
+@media screen and (max-width: 768px) {
+#cssmenu ul li {
+float: none;
+display: block;
+}
+#cssmenu ul li a {
+width: 100%;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+border-bottom: 1px solid #fb998c;
+}
+#cssmenu ul li.last > a,
+#cssmenu ul li:last-child > a {
+border: 0;
+}
+#cssmenu ul li a:after {
+display: none;
+}
+#cssmenu ul li a:before {
+display: none;
+}
+}
+
+
+.banner {
+display: table;
+width: 100%;
+height: 120px;
+background-color: black;
+}
+
+.banner section { /* select all the section elements inside an element that has a banner style*/
+display: table-row;
+width: 100%;
+}
+
+.banner section img { /* select all the img elments in a section element inside an element that has a banner style*/
+width: 100%;
+}
+
+.banner section h1 {
+width: 90%;
+font-size: 3em;
+text-align: center;
+}
+
+.banner section p {
+width: 20%;
+}
+
+.banner-item {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+}
+
+li {
+display: inline;
+float: left;
+}
+
+.navigation {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+
+    h2 {
+color: white;
+color: white;
+font-size: 30pt;
+text-shadow:
+3px 3px 0 #000,
+-1px -1px 0 #000,
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+font-family: Bradley Hand;
+
+}
+    .none {
+font-size: 14pt;
+}
+    p {
+color: azure;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+font-family: cooper black;
+width: 700px;
+font-size: 18pt;
+
+}
+    .nav {
+list-style:none;
+margin:0;
+padding:0;
+text-align:center;
+}
+    .nav li {
+display:inline;
+}
+    .nav a {
+display:inline-block;
+padding:10px;
+}
+    h1 {
+font-family:American Typewriter;
+color:ghostwhite;text-align:center;
+font-size:75px;
+display: inline;
+background-color: black;
+margin:0;
+}
+    .link {
+color: azure;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+font-size: 30px;
+font-family: Comic Sans MS;
+text-decoration: underline;
+}
+    .bussec {
+color: azure;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+font-family: cooper black;
+font-size: 30px;
+}
+    .sectable {
+display: table;
+width: 100%;
+}
+.sectable section {
+display: table-row;
+width: 100%;
+
+}
+.sectable section p {
+display: table-cell;
+}
+.sectable section img {
+display: table-cell;
+}
+.boroughs {
+/*width: 400px;*/
+vertical-align: middle;
+color: whitesmoke;
+font-size: 20pt;
+font-family: Helvetica Neue;
+}
+
+.edit {
+font-size: 40px;
+width: 100px;
+height: 200px;
+}
+
+.editText {
+  font-size: 40px;
+  font-family: monospace;
+  width: 45px;
+  margin-left: 20px;
+  margin-bottom: -20px;
+  height: 200px;
+  word-wrap: break-word;
+}
+
+
+.table {
+display: table;
+width: 100%;
+height: 300px;
+background-color: black;
+}
+
+.table section { /* select all the section elements inside an element that has a banner style*/
+display: table-row;
+width: 100%;
+}
+
+.table section img { /* select all the img elments in a section element inside an element that has a banner style*/
+width: 100%;
+}
+
+.table section h1 {
+width: 90%;
+font-size: 3em;
+}
+
+.table section p {
+width: 20%;
+}
+
+.table-item {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+}
+
+
+.capo {
+margin-left: 50px;
+font-size: 25px;
+font-family: monospace;
+color: white;
+}
+
+.capoEdit {
+margin-left: 50px;
+font-size: 25px;
+font-family: monospace;
+color: black;
+}
+
+.capo2 {
+margin-left: 50px;
+margin-top: 13px;
+font-size: 25px;
+font-family: monospace;
+color: white;
+}
+
+.chords {
+margin-left: 50px;
+font-size: 25px;
+font-family: sans-serif;
+color: white;
+
+}
+
+.chordsEdit {
+margin-left: 50px;
+font-size: 25px;
+font-family: sans-serif;
+}
+
+.chords2 {
+margin-left: 50px;
+margin-top: 25px;
+font-size: 25px;
+font-family: sans-serif;
+color: white;
+}
+
+table, th, td {
+
+font-size: auto;
+}
+
+video {
+margin-left: 800px;
+margin-top: -500px;
+}
+
+.chords3 {
+margin-left: 50px;
+margin-right: 50px;
+font-size: 25px;
+font-family: sans-serif;
+color: white;
+}
+
+.chords4 {
+margin-left: 50px;
+font-size: 18px;
+font-family: sans-serif;
+color: white;
+}
+
+iframe {
+margin-left: 970px;
+margin-top: -100000px;
+}
+
+.record {
+margin-left: 25px;
+margin-bottom: 130px;
+
+font-size: 40px;
+width: 300px;
+
+font-family: monospace;
+}
+.artist {
+margin-left: 25px;
+margin-top: -125px;
+font-size: 25px;
+width: 300px;
+
+font-family: sans-serif;
+}
+
+.recordButton {
+margin-bottom: 150px;
+margin-left: 25px;
+}
+
+.artistButton {
+margin-left: 25px;
+}
+
+.imgEdit {
+margin-left: 200px;
+margin-bottom: -200px;
+}
