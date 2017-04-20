@@ -32,7 +32,7 @@ demoApp.appConfig = {
 	}
 
 	],
-	"defaultViewUrl": "/view1"
+	"defaultViewUrl": "/iKnowSongs"
 };
 
 demoApp.config(function ($routeProvider) {

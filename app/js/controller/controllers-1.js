@@ -52,57 +52,48 @@ demoApp.controller("tabsController", ["$scope", "$timeout", function ($scope, $t
 
 }]);
 
+angular.module('app',['firebase'])
+
 demoApp.controller("iKnowSongsController", ["$scope", function ($scope) {
-	$scope.recordName = "Shape of You";
-	$scope.artistName = "Ed Sheeran";
-	$scope.capo = "Capo 2";
-	$scope.chords = "Bm, Em, G, A";
-	$scope.imgSrc = "learningAngular/app/images/edsheerandivide.jpg";
+	var database = firebase.database();
+	$scope.songs = [];
+	$scope.songs.push({
+		recordName: "Shape of You",
+		artistName: "Ed Sheeran",
+		capo: "Capo 2",
+		chords: "Bm, Em, G, A",
+		imgSrc: "app/images/edsheerandivide.jpg"
+	});
 
-
-
-
-	$scope.myValue = true;
-	$scope.myValue2 = false;
-	$scope.myValue3 = true;
-	$scope.myValue4 = false;
-	$scope.myValue5 = true;
-	$scope.myValue6 = true;
-	$scope.myValue7 = false;
-	$scope.myValue8 = false;
-	$scope.myValue9 = true;
-	$scope.myValue10 = false;
+	$scope.editMode = false;
 
 	$scope.toggleNames = function () {
-		if ($scope.myValue === true) {
-			$scope.myValue = false;
-			$scope.myValue2 = true;
-			$scope.myValue3 = false;
-			$scope.myValue4 = true;
-			$scope.myValue5 = false;
-			$scope.myValue6 = false;
-			$scope.myValue7 = true;
-			$scope.myValue8 = true;
-			$scope.myValue9 = false;
-			$scope.myValue10 = true;
-		}
-		else {
-			$scope.myValue = true;
-			$scope.myValue2 = false;
-			$scope.myValue3 = true;
-			$scope.myValue4 = false;
-			$scope.myValue5 = true;
-			$scope.myValue6 = true;
-			$scope.myValue7 = false;
-			$scope.myValue8 = false;
-			$scope.myValue9 = true;
-			$scope.myValue10 = false;
+		$scope.editMode = !$scope.editMode;
+	}
+
+	$scope.newSong = function () {
+		if ($scope.addMode == false) {
+			$scope.addMode = true;
+		}else {
+			$scope.addMode = false;
 		}
 
 	}
 
-	$scope.newSong = function () {
-		console.log("button was pressed");
+	$scope.saveNewSong = function () {
+			$scope.addMode = false;
+			$scope.songs.push({
+				recordName: $scope.newRecordName,
+				artistName: $scope.newArtistName,
+				capo: $scope.newCapo,
+				chords: $scope.newChords,
+				imgSrc: $scope.newImgSrc
+			});
+	}
+
+	$scope.removeSong = function (index) {
+		var spliced = $scope.songs.splice(index,1);
+		console.log(spliced);
 	}
 
 }]);
