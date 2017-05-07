@@ -10,6 +10,13 @@ demoApp.appConfig = {
 		}
 	},
 	{
+		"viewUrl": "/iKnowSongsHome",
+		"routeConfig": {
+			"controller": "iKnowSongsHomeController",
+			"templateUrl": "app/view/iKnowSongsHome.html"
+			}
+	},
+	{
 		"viewUrl": "/songTabs",
 		"routeConfig": {
 			"controller": "tabsController",

@@ -12,17 +12,25 @@
 </header>
 <div id='cssmenu'>
   <ul>
-    <li><a href='index.html'><span>Home</span></a></li>
-    <li class='active'><a href='acoustic.html'><span>Acoustic</span></a></li>
-    <li><a href='ukulele.html'><span>Ukulele</span></a></li>
-    <li><a href='classical.html'><span>Classical</span></a></li>
+    <li style="display: inline; float: left;"><a href='index.html'><span>Home</span></a></li>
+    <li class='active' style="display: inline-block; float: left;"><a href='iKnowSongs.html'><span>Acoustic</span></a></li>
+    <li style="display: inline-block; float: left;"><a href='ukulele.html'><span>Ukulele</span></a></li>
+    <li style="display: inline-block; float: left;"><a href='classical.html'><span>Classical</span></a></li>
   </ul>
 </div>
 <div class="animated fadeInLeft">
   <h2 align="center">Acoustic</h2>
 </div>
-<header class="table" data-ng-repeat="song in songs">
+<div>
+  <lable style="font-size: 20px;"><kbd>Search Song</kbd><input type="text" class="form-control" ng-model="filter.song"></label>
+</div>
+
+
+<li data-ng-repeat="song in songs | filter:filter.song">
+<header class="table">
+
   <section>
+
     <div class="row" >
       <div class="edit col-md-1" data-ng-click="toggleNames()">
         <h3 class="editText">{{editMode ? "DONE" : "EDIT"}}</h3>
@@ -36,30 +44,38 @@
           <div class="col-md-2">
             <img src="{{song.imgSrc}}" class="img-responsive"/>
           </div>
+
         <div class="col-md-4">
           <h2 class="record">{{song.recordName}}</h2>
           <h2 class="artist">{{song.artistName}}</h2>
           <span class="capo" id="capo">{{song.capo}}</span>
           <span class="chords" id="chords">{{song.chords}}</span>
         </div>
+
       </div>
       <div ng-show="editMode">
 
 				<div class="col-md-4">
-					<input type="text" class="recordEdit" data-ng-model="song.recordName">
-	        <input type="text" class="artistEdit" data-ng-model="song.artistName">
+					<input type="text" placeholder="Record Name" class="recordEdit" data-ng-model="song.recordName">
+	        <input type="text" placeholder="Artist Name" class="artistEdit" data-ng-model="song.artistName">
 				</div>
 				<br>
 				<div class="col-md-4">
-	        <input type="text" class="capoEdit" data-ng-model="song.capo">
-	        <input type="text" class="chordsEdit" data-ng-model="song.chords">
-	        <input type="text" class="imgEdit" data-ng-model="song.imgSrc">
+	        <input type="text" placeholder="Capo" class="capoEdit" data-ng-model="song.capo">
+	        <input type="text" placeholder="Chords" class="chordsEdit" data-ng-model="song.chords">
+	        <input type="text" placeholder="image" class="imgEdit" data-ng-model="song.imgSrc">
 				</div>
 				</div>
       </div>
     </div>
+
   </section>
+
 </header>
+</li>
+
+
+
 <div ng-show="addMode">
   <input type="text" class="record" placeholder="Record Name" data-ng-model="newRecordName">
   <input type="text" class="artist" placeholder="Artist Name" data-ng-model="newArtistName"><br>

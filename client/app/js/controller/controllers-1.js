@@ -52,11 +52,12 @@ demoApp.controller("tabsController", ["$scope", "$timeout", function ($scope, $t
 
 }]);
 
-angular.module('app',['firebase'])
+
 
 demoApp.controller("iKnowSongsController", ["$scope", function ($scope) {
-	var database = firebase.database();
+
 	$scope.songs = [];
+
 	$scope.songs.push({
 		recordName: "Shape of You",
 		artistName: "Ed Sheeran",

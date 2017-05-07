@@ -1,0 +1,30 @@
+{
+  "name": "node",
+  "version": "0.1.0",
+  "description": "music database",
+  "main": "server/server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.7"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirdangd/iKnowSongs.git"
+  },
+  "keywords": [
+    "songs"
+  ],
+  "author": "Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirdangd/iKnowSongs/issues"
+  },
+  "homepage": "https://github.com/sirdangd/iKnowSongs#readme"
+}

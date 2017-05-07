@@ -181,10 +181,6 @@ html {
     vertical-align: middle;
 }
 
-li {
-    display: inline;
-    float: left;
-}
 
 .navigation {
     list-style-type: none;
@@ -356,7 +352,7 @@ h1 {
 }
 
 .chordsEdit {
-  
+
   font-size: 25px;
   font-family: sans-serif;
 }
@@ -404,4 +400,8 @@ h1 {
     font-size: 25px;
     width: 300px;
     font-family: sans-serif;
+}
+.pageTab {
+  display: inline;
+  float: left;
 }
