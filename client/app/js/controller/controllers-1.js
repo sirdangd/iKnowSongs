@@ -63,7 +63,7 @@ demoApp.controller("iKnowSongsController", ["$scope", function ($scope) {
 		artistName: "Ed Sheeran",
 		capo: "Capo 2",
 		chords: "Bm, Em, G, A",
-		imgSrc: "app/images/edsheerandivide.jpg"
+		imgSrc: "app/images/edSheeran.jpg"
 	});
 
 	$scope.editMode = false;
@@ -90,11 +90,45 @@ demoApp.controller("iKnowSongsController", ["$scope", function ($scope) {
 				chords: $scope.newChords,
 				imgSrc: $scope.newImgSrc
 			});
+
 	}
 
 	$scope.removeSong = function (index) {
 		var spliced = $scope.songs.splice(index,1);
-		console.log(spliced);
 	}
 
+}]);
+/*
+demoApp.controller("tabsController", ["$scope", "$timeout", function ($scope, $timeout) {
+	$scope.myName = "Danny";*/
+/*	$timeout(function () {
+		$scope.name = "Serjik";
+	}, 1000);*/
+/*
+	$scope.list = ["Danny", "Liana", "Serjik", "Anna"];
+
+	$scope.songs = {
+		"song1": "Hello",
+		"song2": "Bye"
+	}
+
+	$scope.showName = function () {
+		console.log("Button Clicked");
+		console.log("Value of name is " + $scope.myName);
+	}
+
+	$scope.addSong = function () {
+		$scope.songs[$scope.singer] = $scope.song;
+	}
+
+	$scope.showHide = function () {
+		$scope.myName = $scope.myName === "Danny" ? "Not Danny" : "Danny";
+	}
+
+}]);
+
+*/
+
+demoApp.controller("iKnowSongsHomeController", ["$scope", function ($scope) {
+	console.log("works");
 }]);
